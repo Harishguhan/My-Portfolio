@@ -1,0 +1,12 @@
+{
+    "userList":[
+        {
+            "id":1,
+            "name":"harishGuhan",
+            "age":21,
+            "role":"Developer",
+            "Domain":"React Js"
+        }
+    ]
+
+}

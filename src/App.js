@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Route, Routes } from "react-router-dom";
+import "./Assets/Fonts/GeneralSans-Medium.otf";
+import "./index.css";
+import { CustomRoutes } from "./Routes/CustomRoutes";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="overflow-x-hidden">
+        <Routes>
+          {CustomRoutes.map((item, key) => {
+            return (
+              <Route path={item.path} key={key} element={<item.component />} />
+            );
+          })}
+        </Routes>
+      </div>
+    </>
   );
 }
 
