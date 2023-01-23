@@ -44,13 +44,15 @@ const Navbar = () => {
                 Projects
               </li>
             </Link>
-            <li
-              className={`${
-                location === "/contact" ? "text-indigo-600" : null
-              }`}
-            >
-              Contact
-            </li>
+            <Link to="/contacts">
+              <li
+                className={`${
+                  location === "/contacts" ? "text-indigo-600" : null
+                }`}
+              >
+                Contact
+              </li>
+            </Link>
           </ul>
         </div>
         <div className="hidden md:flex">
@@ -70,11 +72,40 @@ const Navbar = () => {
         <div className="w-full bg-white pl-5 md:hidden pb-3">
           <div className="">
             <ul className="">
-              <li>Home</li>
-              <li>About</li>
-              <li>Projects</li>
-              <li>Skills</li>
-              <li>Education</li>
+              <Link to={"/"}>
+                <li
+                  className={`${location === "/" ? "text-indigo-600" : null}`}
+                >
+                  Home
+                </li>
+              </Link>
+              <Link to={"/about"}>
+                <li
+                  className={`${
+                    location === "/about" ? "text-indigo-600" : null
+                  }`}
+                >
+                  About Me
+                </li>
+              </Link>
+              <Link to="/projects">
+                <li
+                  className={`${
+                    location === "/project" ? "text-indigo-600" : null
+                  }`}
+                >
+                  Projects
+                </li>
+              </Link>
+              <Link to="/contacts">
+                <li
+                  className={`${
+                    location === "/contacts" ? "text-indigo-600" : null
+                  }`}
+                >
+                  Contact
+                </li>
+              </Link>
             </ul>
           </div>
           <div className="flex flex-col">

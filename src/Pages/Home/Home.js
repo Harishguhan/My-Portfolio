@@ -1,9 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import homeImg from "../../Assets/Images/home.svg";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import Project from "../Project/Project";
 const Home = () => {
+  const navigate = useNavigate();
+
+  const projectPage = () => {
+    navigate("/projects");
+  };
   return (
     <div className="w-screen">
       <Navbar />
@@ -37,10 +43,16 @@ const Home = () => {
       </div>
       <Project />
       <div className="flex justify-center mt-5">
-      <button className="bg-indigo-600 p-3 text-white mt-4 px-10 rounded-lg font-bold">
-        View Projects
-      </button></div>
-      <Footer />
+        <button
+          onClick={projectPage}
+          className="bg-indigo-600 p-3 text-white mt-4 px-10 rounded-lg font-bold"
+        >
+          View Projects
+        </button>
+      </div>
+      <div className="mt-10 ">
+        <Footer />
+      </div>
     </div>
   );
 };

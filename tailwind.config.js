@@ -21,7 +21,8 @@ module.exports = {
     },
     colors: {
       'grey': '#bfbfbf',
-      'primary':'#35a5ab'
+      'primary':'#35a5ab',
+      'form-bg':'#EFEFEF'
     },
   },
   plugins: [require("flowbite/plugin")],
